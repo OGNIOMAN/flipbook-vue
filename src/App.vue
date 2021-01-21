@@ -4,10 +4,6 @@
     :class="{ 'has-mouse': hasMouse }"
     @touchstart="hasMouse = false"
   >
-    <Ribbon
-      text="Fork me on GitHub"
-      url="https://github.com/ts1/flipbook-vue"
-    />
     <Flipbook
       class="flipbook"
       :pages="pages"
@@ -34,7 +30,7 @@
           @click="flipbook.zoomIn"
         />
         <span class="page-num">
-          Page {{ flipbook.page }} of {{ flipbook.numPages }}
+          Strona {{ flipbook.page }} z {{ flipbook.numPages }}
         </span>
         <minus-icon
           class="btn minus"
@@ -48,16 +44,11 @@
         />
       </div>
     </Flipbook>
-    <p class="credit">
-      Photos from
-      <a href="https://unsplash.com/" target="_blank">Unsplash</a>.
-    </p>
   </div>
 </template>
 
 <script lang="coffee">
 import 'vue-material-design-icons/styles.css'
-import Ribbon from 'vue-ribbon'
 import LeftIcon from 'vue-material-design-icons/ChevronLeftCircle'
 import RightIcon from 'vue-material-design-icons/ChevronRightCircle'
 import PlusIcon from 'vue-material-design-icons/PlusCircle'
@@ -66,7 +57,7 @@ import Flipbook from './Flipbook'
 
 export default
   name: 'app'
-  components: { Flipbook, LeftIcon, RightIcon, PlusIcon, MinusIcon, Ribbon }
+  components: { Flipbook, LeftIcon, RightIcon, PlusIcon, MinusIcon}
   data: ->
     pages: [],
     pagesHiRes: [],
@@ -97,21 +88,43 @@ export default
     setTimeout (=>
       @pages = [
         null
-        'images/1.jpg'
-        'images/2.jpg'
-        'images/3.jpg'
-        'images/4.jpg'
-        'images/5.jpg'
-        'images/6.jpg'
-      ]
-      @pagesHiRes = [
-        null
-        'images-large/1.jpg'
-        'images-large/2.jpg'
-        'images-large/3.jpg'
-        'images-large/4.jpg'
-        'images-large/5.jpg'
-        'images-large/6.jpg'
+        'images/1_2x.png'
+        'images/2_2x.png'
+        'images/3_2x.png'
+        'images/4_2x.png'
+        'images/5_2x.png'
+        'images/6_2x.png'
+        'images/7_2x.png'
+        'images/8_2x.png'
+        'images/9_2x.png'
+        'images/10_2x.png'
+        'images/11_2x.png'
+        'images/12_2x.png'
+        'images/13_2x.png'
+        'images/14_2x.png'
+        'images/15_2x.png'
+        'images/16_2x.png'
+        'images/17_2x.png'
+        'images/18_2x.png'
+        'images/19_2x.png'
+        'images/20_2x.png'
+        'images/21_2x.png'
+        'images/22_2x.png'
+        'images/23_2x.png'
+        'images/24_2x.png'
+        'images/25_2x.png'
+        'images/26_2x.png'
+        'images/27_2x.png'
+        'images/28_2x.png'
+        'images/29_2x.png'
+        'images/30_2x.png'
+        'images/31_2x.png'
+        'images/32_2x.png'
+        'images/33_2x.png'
+        'images/34_2x.png'
+        'images/35_2x.png'
+
+        
       ]
     ), 1
 
